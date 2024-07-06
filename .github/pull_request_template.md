@@ -1,11 +1,4 @@
-## Project
-
-- [ ] finance-link
-- [ ] finance-app
-- [ ] finance-link-admin
-- [ ] finance-link-backend
-
-
+## Project Boiler plate
 ## Assigned Jira Ticket
 
 This PR is related to [Jira Ticket Number](https://dawahsoft.atlassian.net/browse/<ticket-number>)
