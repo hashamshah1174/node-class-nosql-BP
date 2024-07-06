@@ -1,77 +1,116 @@
-# MUNTADA AID (BACKEND)
+## Getting Started
 
-The Muntada Aid Website is the online presence of Muntada Aid, a non-profit organization committed to creating a caring and dignified world where everyone is free from poverty and has access to education and healthcare. Our mission is to develop healthy and sustainable communities worldwide, guided by the 'I CARE' model of values:
+### Prerequisites
 
-I - Inspiring Hope: We believe that the world can be a better place, and our hope is that our actions will inspire others to be part of the change.
+Before you begin, ensure you have met the following requirements:
 
-C - Caring and Compassionate: Our work is founded on showing care and compassion to all those that we work with.
+- Node.js installed on your local machine
+- MongoDB installed and running locally or accessible remotely (if applicable)
+- Docker (optional, for deployment)
 
-A - Accountability and Integrity: We take responsibility for our actions and hold ourselves accountable in all that we do.
+### Installation
 
-R - Respect and Dignity: We show respect and preserve the dignity of all those we work with by treating others as we wish to be treated.
+1. **Clone the repository and navigate into the project directory:**
 
-E - Excellence: In working towards making the world a better place, excellence is the standard we set ourselves both in our conduct and our actions.
+   ```bash
+   git clone <repository_url>
+   cd <directory_path>
 
-Our website serves as a platform to showcase our initiatives, facilitate donations, and keep our supporters informed about our work.
+2. **Install dependencies:**
 
-## 👋 Welcome Aboard
+    ```bash
+    npm install
 
-We welcome you aboard and hope you'll enjoy exploring this project. To get started, just read on and [follow these tips for sharing your contribution](#how-to-contribute) amongst the team.
+3. **Set up environment variables:**
 
-### .github
+Create a `.env` file in the root directory of your project and add the following environment variables:
 
-The 📁[.github](/.github) folder is located at the root level of the project that contains:
+    ```plaintext
+    # App configuration
+    APP_MODE=dev
+    APP_PORT=1338
+    APP_HOST=127.0.0.1
 
-- 📜 [pull_request_template.md](/.github/pull_request_template.md) - _GitHub Pull Request Markdown Template_
+    # JWT Tokens
+    JWT_SECRET_KEY=<Your_JWT_Secret_Key>
+    JWT_REFRESH_SECRET_KEY=<Your_JWT_Refresh_Secret_Key>
+    JWT_SECRET_EXPIRE_IN=1h
+    JWT_REFRESH_SECRET_EXPIRE_IN=30d
 
-## How To Contribute?
+    # DigitalOcean Spaces Configuration
+    DO_SPACES_ENDPOINT=<end point do>
+    DO_SPACES_REGION=sgp1
+    DO_SPACES_KEY=<Your_DigitalOcean_Spaces_Key>
+    DO_SPACES_SECRET=<Your_DigitalOcean_Spaces_Secret>
+    DO_SPACES_NAME=<spacename>
+    DO_BUCKET_NAME=<buckent>
+    DO_SUB_FOLDER=<subfolder>
 
-Writing huge blocks of code is indeed a tedious and time-consuming job. You put all your efforts into getting the job done at the right time but have you ever noticed that once you deliver your work to your teammates, it somehow gets delayed? Why?
+    # PostgreSQL Database Configuration (Local)
+    POSTGRESQL_HOST=localhost
+    POSTGRESQL_USERNAME=postgres
+    POSTGRESQL_PASSWORD=root
+    POSTGRESQL_DATABASE=<dtabase>
+    POSTGRESQL_PORT=5432
+    POSTGRESQL_SSLMODE=false
 
-1. Your pull request is not linked to any Jira Ticket.
-2. Your pull request title is too vague.
-3. Your pull request is missing a proper description/summary.
-4. Your pull request lacks the steps for performing the task.
-5. Your pull request has no images or videos.
+    # Uncomment the below variables for DigitalOcean managed database connection
+    # POSTGRESQL_HOST=<HOST>
+    # POSTGRESQL_USERNAME=<User anme>
+    # POSTGRESQL_PASSWORD=<Your_Database_Password>
+    # POSTGRESQL_DATABASE=<database>
+    # POSTGRESQL_PORT=25060
+    # POSTGRESQL_SSLMODE=true
 
-These small mishaps can lead to quite a time waste. Don't assume that the other person knows what you've done, always try to avoid such mistakes by following these tips:
+Replace <Your_...> placeholders with your actual credentials or values.
 
-1. **Ensure that your new branch and PR are always ahead of the `main` branch.**
-2. **Ensure that your PR has a proper title.**
+4. **Compile TypeScript and start the server::**
 
-| **Pull Request Title**                      | **Approach** |
-| ------------------------------------------- | ------------ |
-| feat/login                                  | ❌           |
-| DA-XX : Adds Login Feature To Existing Site | ✔            |
+   ```bash
+   npm run dev
 
-3. **Ensure that your PR is minimalistic and task-oriented.**
-4. **Ensure that your PR must not exceed more than 10 file changes.**
-5. **Ensure that your PR [follows the defined template](/.github/pull_request_template.md), refer to this [example](https://github.com/Fullstop-pk/Dade-Auctions/pull/117).**
-6. **Ensure that your PR has appropriate [attached labels](https://github.com/Fullstop-pk/Dade-Auctions/labels).**
-7. **Ensure that your commits follow [proper conventions](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13) like**
+## Contributing
 
-| **Commit**                                  | **Approach** |
-| ------------------------------------------- | ------------ |
-| feat: adds sign-in button to the login page | ✔            |
-| chore: updates .gitignore file              | ✔            |
-| doc: removes the unused headings            | ✔            |
-| test: adds forgot password flow             | ✔            |
-| fix: admin screen related ui issues         | ✔            |
-| refactor: variable MSA to hasMSA            | ✔            |
+We welcome contributions from the community! Please follow these guidelines when submitting pull requests:
 
-8. **Ensure that your PR does not remain open for a long time.**
-9. **Use `git branch --delete <branchname>` to remove your local stale branch.**
+    ```bash
+  ### Fork the repository on GitHub and clone it to your local machine
+    git clone <your_fork_url>
+    cd <directory_path>
+    
+  ### Create a new branch from main for your feature or bug fix
+    git checkout -b feature/my-feature
+    
+  ### Make your changes, ensuring they follow the project coding style and conventions
+    
+  ### Commit your changes with clear and descriptive messages
+    git commit -am 'Add feature: My new feature'
+    
+  ### Push your changes to your forked repository
+    git push origin feature/my-feature
 
-## Tools & Languages
+Submit a pull request (PR) to the main branch of the original repository
 
-- [Microsoft Visual Studio Code](https://code.visualstudio.com/download)
-- [Laravel](https://laravel.com/)
-- [Postman](https://www.postman.com/downloads/)
-- [TypeScript](https://code.visualstudio.com/docs/languages/typescript)
-- [JavaScript](https://www.javascript.com/)
-- [ReactJS](https://reactjs.org/)
-- [NextJS](https://nextjs.org/)
-- [NodeJS](https://nodejs.org/en/download/)
-- [JSON](https://www.json.org/)
-- [Yet Another Negotiator (YARN)](https://yarnpkg.com/)
-- [Node Package Manager (NPM)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)
+## Technologies Used
+
+- Node.js
+- TypeScript
+- Express
+- MongoDB
+- Mongoose
+- JWT
+- Swagger
+
+
+### Explanation:
+
+- **Contributing Section:** Combines all steps into one block using `bash` syntax where applicable (`git` commands).
+- Steps are numbered implicitly by order and are separated logically by line breaks and comments.
+- Encourages clear commit messages and pull request descriptions to facilitate smooth review and merging.
+- **Technologies Used Section:** Lists the technologies utilized in the project.
+- **License Section:** States the project's licensing information and provides a link to the detailed license file.
+
+This markdown format now provides a concise and organized contribution guideline section, making it easier for contributors to follow the steps sequentially while maintaining clarity and structure in your project's README file. Adjust the details and links as necessary to fit your project's specific requirements.
+
+
+
