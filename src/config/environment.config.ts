@@ -1,0 +1,29 @@
+import { config } from "dotenv";
+import * as path from "path";
+
+config({ path: path.join(__dirname, "..", "..", ".env") });
+
+export const {
+  APP_MODE,
+  APP_HOST,
+  APP_PORT,
+  JWT_SECRET_KEY,
+  JWT_REFRESH_SECRET_KEY,
+  JWT_SECRET_EXPIRE_IN,
+  JWT_REFRESH_SECRET_EXPIRE_IN,
+  SWAGGER_PASSWORD,
+  SWAGGER_USERNAME,
+  DO_SPACES_ENDPOINT,
+  DO_SPACES_KEY,
+  DO_SPACES_SECRET,
+  DO_SPACES_NAME,
+  DO_BUCKET_NAME,
+  DO_SUB_FOLDER,
+  DO_SPACES_REGION,
+  POSTGRESQL_HOST,
+  POSTGRESQL_USERNAME,
+  POSTGRESQL_PASSWORD,
+  POSTGRESQL_DATABASE,
+  POSTGRESQL_PORT,
+  POSTGRESQL_SSLMODE,
+} = process.env;
